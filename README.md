@@ -54,7 +54,7 @@ This project sets up a containerized logging pipeline using **Fluent Bit** to co
 
 - Go to [Azure Portal](https://portal.azure.com)
 - Create a **Log Analytics Workspace**
-- Copy these from the workspace:
+- Copy the following values:
   - **Workspace ID**
   - **Primary Key**
 
@@ -62,7 +62,7 @@ This project sets up a containerized logging pipeline using **Fluent Bit** to co
 
 ### ✅ Step 2: Configure Fluent Bit
 
-In `fluent-bit/fluent-bit.conf`, replace the placeholders:
+In `fluent-bit/fluent-bit.conf`, replace the placeholders with your actual values:
 
 ```ini
 [OUTPUT]
@@ -71,27 +71,40 @@ In `fluent-bit/fluent-bit.conf`, replace the placeholders:
     Customer_ID     YOUR_WORKSPACE_ID
     Shared_Key      YOUR_PRIMARY_KEY
     Log_Type        AppLog
+
 ✅ Step 3: Start the Pipeline
+bash
+Copy
+Edit
 docker-compose up --build
-Your app will start logging, and Fluent Bit will ship logs to Azure.
+This command will:
+
+Start the Node.js app
+
+Start Fluent Bit
+
+Ship container logs to Azure Monitor
 
 ✅ Step 4: View Logs in Azure
-Go to Azure Portal > Log Analytics Workspace
+Go to Azure Portal → Log Analytics Workspace
 
-Click Logs
+Click on Logs
 
-Run this query:
+Run the following query:
 
 kusto
+Copy
+Edit
 AppLog_CL
 | sort by TimeGenerated desc
+You should start seeing your app logs in real time!
 
 💼 Real-World Applications
-👨‍💻 Portfolio-ready DevOps project
+👨‍💻 Portfolio-ready DevOps project — show off your skills with Azure & logging
 
-📈 Useful for centralized log analysis in production
+📈 Centralized log analysis — useful in production-grade systems
 
-☁️ Shows Azure integration & observability pipeline setup
+☁️ Cloud-native observability — integrates Docker & Azure seamlessly
 
 🙌 Author
 Oluwahiyanu Akinlalu
