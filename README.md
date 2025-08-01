@@ -48,26 +48,17 @@ This project sets up a containerized logging pipeline using **Fluent Bit** to co
 
 ---
 
-## 🛠 Setup Steps
+💼 Real-World Applications
+👨‍💻 Portfolio-ready DevOps project — show off your skills with Azure & logging
 
-### ✅ Step 1: Create Azure Resources
+📈 Centralized log analysis — useful in production-grade systems
 
-- Go to [Azure Portal](https://portal.azure.com)
-- Create a **Log Analytics Workspace**
-- Copy the following values:
-  - **Workspace ID**
-  - **Primary Key**
+☁️ Cloud-native observability — integrates Docker & Azure seamlessly
 
----
+🙌 Author
+Oluwahiyanu Akinlalu
+GitHub: @oluwahiyanu
 
-### ✅ Step 2: Configure Fluent Bit
-
-In `fluent-bit/fluent-bit.conf`, replace the placeholders with your actual values:
-
-```ini
-[OUTPUT]
-    Name            azure
-    Match           *
-    Customer_ID     YOUR_WORKSPACE_ID
-    Shared_Key      YOUR_PRIMARY_KEY
-    Log_Type        AppLog
+vbnet
+Copy
+Edit
